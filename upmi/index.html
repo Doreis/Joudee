@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UPMI</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+</head>
+<body>
+
+    <div class="loading">
+        <div class="loadTop"></div>
+        <div class="loadBottom"></div>
+        <b></b>
+    </div>
+
+    <div class="AllHome">
+
+        <div class="allTop">
+            <img src="images/logo@2x.png" class="homeLogo"/>
+            <header>
+
+                <nav>
+                    <a href="index.html">
+                        <b>首页</b>
+                        <b>首页</b>
+                    </a>
+                    <a data-href="service.html">
+                        <b>服务</b>
+                        <b>服务</b>
+                    </a>
+                    <a data-href="case.html">
+                        <b>案例</b>
+                        <b>案例</b>
+                    </a>
+                    <a data-href="about.html">
+                        <b>关于我们</b>
+                        <b>关于我们</b>
+                    </a>
+                </nav>
+            </header>
+
+            <div class="homeTop">
+                <h1>上米科技有限公司</h1>
+                <p>公司致力于为企业品牌形象打造、服务品质和知名度提升，提供整体数字营销咨询、数字营销平台搭建和数字营销运营服务，凭借线上线下整合的全渠道电商解决方案，应对不同客户需求的高中低端解决方案，以及从消费体验到配送到户的一站式端到端服务</p>
+            </div>
+
+            <ul class="homeShow">
+                <li class="topBackAnimate" data-src="images/top1.jpg"></li>
+                <li data-src="images/top2.jpg"></li>
+                <li data-src="images/top3.jpg"></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/load.js"></script>
+    <script>
+        (function(){
+            var navA = $("nav a"),
+                    allTopUlLi = $(".allTop ul li"),
+                    allTop = $(".allTop"),
+                    service = $(".service");
+
+            var allTopArray = [],
+                    allTopUlLiN = 1,
+                    openHref = null;
+
+            var tl = new TimelineMax();
+
+
+            /**首页导航**/
+            navA.hover(function(){
+               $(this).find("b").last().css("width",$(this).width());
+            },function(){
+                $(this).find("b").last().css("width",0);
+            });
+            /**END首页导航**/
+
+
+
+            /**首页轮播**/
+            allTopUlLi.each(function(){
+                allTopArray.push($(this));
+            });
+
+            setInterval(function(){
+                allTopUlLi.removeClass("topBackAnimate");
+                allTopArray[allTopUlLiN].addClass("topBackAnimate");
+                if(allTopUlLiN==allTopArray.length-1){
+                    allTopUlLiN = 0;
+                }else {
+                    allTopUlLiN++;
+                }
+            },5000);
+            /**END首页轮播**/
+
+
+
+            navA.click(function(){
+                openHref = $(this).attr("data-href");
+                tl.to(allTop,0.5,{rotationY:"-50deg",ease:Power1.easeInOut})
+                        .to(allTop,0.6,{left:"-50%",ease:Power1.easeInOut},0)
+                        .to(allTop,0.3,{opacity:"0",ease:Power1.easeInOut,onComplete:openPage},0.3);
+            });
+
+            function openPage(){
+                window.location.href = openHref;
+            }
+
+        })();
+    </script>
+</body>
+</html>

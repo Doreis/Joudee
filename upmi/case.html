@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CASE</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+</head>
+<body>
+<div class="navBt serviceNav">
+    <a></a>
+    <a></a>
+    <a></a>
+</div>
+
+    <div class="caseTop" style="position: relative;left: 100%;">
+        <h2>CASE</h2>
+        <span><font color="#e8390d">案例</font></span>
+        <div class="line"></div>
+    </div>
+
+
+    <ul class="caseContent">
+        <li style="background: url(images/ui.jpg) no-repeat center">
+            <div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>Sevenhills - Nature's Combinations</span>
+            </p>
+        </li>
+        <li style="background: url(images/ui1.jpg) no-repeat center">
+            <div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>Williams Jet Tenders</span>
+            </p>
+        </li>
+        <li style="background: url(images/channel.jpg) no-repeat center">
+            <div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>Visit Humboldt</span>
+            </p>
+        </li>
+        <li style="background: url(images/ui8.jpeg) no-repeat center">
+            <div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>Gelateria del Biondo</span>
+            </p>
+        </li>
+        <li style="background: url(images/ui3.jpeg) no-repeat center"><div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>TRENDING SITES View all sites</span>
+            </p></li>
+        <li style="background: url(images/ui4.jpeg) no-repeat center"><div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>LAST NOMINEES We need your vote</span>
+            </p></li>
+        <li style="background: url(images/ui5.jpeg) no-repeat center"><div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>Agency Life in Liège, Belgium</span>
+            </p></li>
+        <li style="background: url(images/ui6.jpeg) no-repeat center"><div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>NYC Awwwards Conference</span>
+            </p></li>
+        <li style="background: url(images/ui7.jpeg) no-repeat center"><div class="caseContentBack"></div>
+            <p>
+                <b></b>
+                <span>Sevenhills - Nature's Combinations</span>
+            </p></li>
+    </ul>
+
+<!--导航-->
+<div class="navPop">
+    <div class="navContent">
+        <div class="navLogo">
+            <a href="index.html">
+                <img src="images/logo.png"/>
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">首页<b></b></a>
+            </li>
+            <li>
+                <a href="service.html">服务<b></b></a>
+            </li>
+            <li>
+                <a href="case.html" class="on">案例<b></b></a>
+            </li>
+            <li>
+                <a href="about.html">关于我们<b></b></a>
+            </li>
+        </ul>
+        <div class="introduce">
+            <p>上米科技有限公司</p>
+            <span>The qinhuai district, nanjing city, jiangsu province south road Su Hao building 1906</span>
+            <span>TEL.18761803904</span>
+        </div>
+
+        <div class="popClose trans">
+            <a></a>
+            <a></a>
+        </div>
+    </div>
+</div>
+<!--END导航-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/TweenMax.js"></script>
+<script src="js/nav.js"></script>
+<script>
+    (function(){
+        var caseContentLi = $(".caseContent li");
+        caseContentLi.height(caseContentLi.width()*0.7);
+
+        $(window).resize(function(){
+            caseContentLi.height(caseContentLi.width()*0.7);
+        });
+
+        var tl = new TimelineMax();
+
+
+        tl.to($(".caseTop"),0.5,{left:"0",ease:Power1.easeInOut})
+                .staggerTo(caseContentLi,0.5,{left:"0",ease:Power1.easeInOut},0.05,0.05);
+    })();
+</script>
+</body>
+</html>

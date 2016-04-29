@@ -1,0 +1,69 @@
+*{margin: 0;padding: 0;border: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;font-family: "微软雅黑", "黑体", sans-serif;}
+html,body{width: 100%;height: 100%;background: #f7f7f7;}
+body{padding: 24px 0;position: relative;}
+a:visited{text-decoration: none;}
+a:link{text-decoration: none;}
+a:active{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,li{list-style: none;}
+
+body:after{content: "";width: 100%;height: 24px;background: #fff;position: fixed;top: 0;left: 0;z-index: 1;}
+body:before{content: "";width: 100%;height: 24px;background: #fff;position: fixed;bottom: 0;left: 0;z-index: 1;}
+
+
+.homeAll{width: 100%;position: relative;overflow: hidden;border-left: 36px solid #fff;border-right: 36px solid #fff;}
+/**导航**/
+.navDiv{width: 20px;position: fixed;top: 50%;left: 9px;overflow: hidden;margin-top: -8px;cursor: pointer;transition: all 0.2s ease-out;-webkit-transition: all 0.2s ease-out;-o-transition: all 0.2s ease-out;-moz-transition: all 0.2s ease-out;}
+.navDiv b{display: block;width: 100%;height: 2px;background: #666;margin-bottom: 5px;}
+.navDiv b:nth-child(3){margin-bottom: 0;}
+.navDiv:hover{opacity: 0.6;}
+.navPop{width: 100%;height: 100%;position: fixed;top: 0;left: -100%;z-index: 10;background: rgba(0,0,0,0.8);}
+.navPopLeft{width: 50%;float: left;height: 100%;position: relative;}
+.navPopLeft:after{content: "";width: calc(100% - 48px);height: 1px;background: #fff;position: absolute;top: 50%;left: 72px;}
+.navPopRight{width: 50%;height: 100%;float: left;padding-left: 10%;transform-style: preserve-3d;-webkit-transform-style: preserve-3d;perspective: 1000px;}
+.navPopRight a{color: #fff;}
+.navPopRight nav{display: inline-block;width: auto;overflow: hidden;position: relative;top: 50%;margin-top: -91px;transition: all 0.2s ease-out;-webkit-transition: all 0.2s ease-out;-o-transition: all 0.2s ease-out;-moz-transition: all 0.2s ease-out;}
+.navPopRight nav a{display: inline-block;width: auto;overflow: hidden;font-size: 2rem;font-weight: 100;padding-bottom: 18px;cursor: pointer;position: relative;}
+.navPopRight nav a:nth-child(4){padding-bottom: 0;}
+.navPopRight nav a b{display: block;width: 0;height: 2px;background: #fff;position: absolute;bottom: 10px;right: 0;transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;}
+.navPopRight nav .on b{width: 100%;right: unset;left: 0;}
+.navClose{width: 30px;position: absolute;left: 40px;top: 50%;height: 30px;margin-top: -15px;padding-top: 14px;transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;cursor: pointer;}
+.navClose a{display: block;width: 30px;height: 2px;background: #fff;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}
+.navClose a:nth-child(2){transform: rotate(-45deg);-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg);position: relative;top: -2px;left: 0;}
+.navClose:hover{transform: rotate(-180deg);-webkit-transform: rotate(-180deg);-moz-transform: rotate(-180deg);}
+
+.all{width: 100%;overflow: hidden;}
+.homeTop{width: calc(100% - 72px);height: 100%;position: fixed;top: 24px;left: 36px;z-index: 0;}
+.homeTopLeft{width: 50%;float: left;position: relative;overflow: hidden;}
+.homeTopLeft ul{width: 100%;height: 100%;}
+.homeTopLeft ul li{width: 100%;height: 33.33%;position: relative;}
+.homeTopLeft p{font-size: 14px;color: #333;line-height: 1.5;width: 50%;position: relative;top: 50%;left: 25%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.homeTopLeft span{display: block;width: 224px;height: 340px;border: 18px solid #fff;position: absolute;top: 50%;left: 20%;margin-top: -160px;}
+.homeTopLeft ul li:nth-child(2) span{left: unset;right: 20%;}
+.homeTopLeft ul li:nth-child(2) p{text-align: right;}
+.logo1{display: block;width: 60px;position: absolute;top: 12px;left: 50%;z-index: 10;margin-left: -30px;}
+.homePro{position: absolute;font-size: 20px;color: #333;text-align: center;left: 0;width: 100%;z-index: 10;top: 88px;}
+.usePrompt{font-size: 16px;display: inline-block;width: auto;color: #999;position: absolute;z-index: 10;right: -20px;top: 50%;transform: rotate(-90deg);margin-top: -20px;}
+.usePrompt span{font-weight: bolder;color: #333;}
+.homeTopRight{width: 50%;height: 100%;float: right;overflow: hidden;}
+.homeTopRight ul{width: 300%;height: 100%;position: relative;left: -200%;}
+.homeTopRight ul li{width: 33.33%;float: left;height: 100%;position: relative;}
+.homeTopRight ul li:nth-child(1){background: url(../img/headBack1.gif) no-repeat fixed;background-size: cover;}
+.homeTopRight ul li:nth-child(2){background: url(../img/headBack2.gif) no-repeat fixed;background-size: cover;}
+.homeTopRight ul li:nth-child(3){background: url(../img/headBack.gif) no-repeat fixed;background-size: cover;}
+
+.homeContent{width: 100%;overflow: hidden;background: #f7f7f7;position: relative;padding-top: 24px;}
+.homeContent ul{width: 100%;overflow: hidden;}
+.homeContent ul li{width: 100%;overflow: hidden;}
+.homeCo{width: 340px;height: 500px;display: block;position: relative;padding: 36px;transform-style: preserve-3d;-webkit-transform-style: preserve-3d;perspective: 1000px;margin: 48px;cursor: pointer;transition: all 0.3s ease-out;}
+.homeCo b{display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 1;transition: all 0.3s ease-out;box-shadow: 0 0 20px rgba(0,0,0,0.7);}
+.homeContent ul li:nth-child(1) a b{background: url(../img/caseBg1.jpg) no-repeat center;background-size: cover;}
+.homeContent ul li:nth-child(2) a b{background: url(../img/caseBg2.jpg) no-repeat center;background-size: cover;}
+
+.homeCo p{width: calc(100% - 70px);height: calc(100% - 70px);border: 18px solid #fff;display: block;opacity: 0.9;transform: translateX(-50%) translateY(-50%) translateZ(40px);position: absolute;top: 50%;left: 50%;z-index: 2;transform-origin:50% 50%;transition: all 0.35s ease-out;}
+.homeCo span{white-space: nowrap;font-size: 20px;color: #000;text-align: center;position: absolute;z-index: 4;transform:  translateX(-50%) translateY(-50%) translateZ(50px);top: 50%;left: 50%;transition: all 0.4s ease-out;}
+.homeContent ul li:nth-child(1) a{left: 18%;}
+.homeContent ul li:nth-child(1) a span{color: #fff;text-shadow: 0 0 5px rgba(0,0,0,0.5);}
+.homeContent ul li:nth-child(2) a{float: right;right: 18%;}
+.homeContent ul li:nth-child(2) a span{color: #fff;}
+

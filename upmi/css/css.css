@@ -1,0 +1,142 @@
+*{margin: 0;padding: 0;border: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;font-family: "微软雅黑", "黑体", sans-serif;}
+a:link{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:active{text-decoration: none;}
+ul,li{list-style: none;}
+
+@font-face {
+    /* font-properties */
+    font-family: myFont;
+    src:url('../fonts/Ailerons.ttf');
+}
+
+html,body{width: 100%; -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;font-size: 100%;height: 100%;position: relative;}
+
+.trans{transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;}
+
+.AllHome{perspective: 5000px;transform-style: preserve-3d;-webkit-transform-style: preserve-3d;position: relative;-webkit-perspective: 5000px;height: 100%;width: 100%;}
+.allTop{width: 100%;overflow: hidden;position: relative;z-index: 1;height: 100%;}
+header{width: 100%;overflow: hidden;padding: 14px;position: relative;top: 0;left: 0;z-index: 100;}
+.homeLogo{display: block;position: absolute;height: 40px;left: 24px;top: 24px;}
+header nav{width: 188px;overflow: hidden;position: relative;left: 50%;transform: translateX(-50%);-webkit-transform: translateX(-50%);-o-transform: translateX(-50%);-moz-transform: translateX(-50%);margin-left: 12px;}
+header nav a{display: inline-block;width: auto;overflow: hidden;float: left;margin-right: 12px;color: rgba(200,200,200,0.85);position: relative;font-size: 14px;line-height: 1;opacity: 1;cursor: pointer;}
+header nav a b{font-weight: 100;display: inline-block;width: auto;overflow: hidden;}
+header nav a b:nth-child(2){color: #ea442c;position: absolute;top: 0;left: 0;width: 0;z-index: 10;white-space: nowrap;transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;}
+
+.homeTop{width: 100%;overflow: hidden;color: #fff;text-align: center;letter-spacing: 8px;position: relative;top: 50%;transform: translateY(-70%);-webkit-transform: translateY(-70%);-o-transform: translateY(-70%);-moz-transform: translateY(-70%);}
+.homeTop p{display: block;width: 50%;overflow: hidden;position: relative;left: 50%;margin-left: -25%;line-height: 1.8;margin-top: 18px;font-size: 16px;color: rgba(255,255,255,0.8);letter-spacing: 5px;}
+
+.allTop ul{width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: -1;}
+.allTop ul li{width: 100%;height: 100%;display: none;background-size: cover!important;}
+
+.topBackAnimate{animation: topBack 1s forwards;-webkit-animation: topBack 1s forwards;-moz-animation: topBack 1s forwards;display: block!important;}
+
+@keyframes topBack{
+    0%{transform: scale(1.5);}
+    100%{transform: scale(1);}
+}
+
+@-webkit-keyframes topBack{
+    0%{-webkit-transform: scale(1.5);}
+    100%{-webkit-transform: scale(1);}
+}
+
+@-moz-keyframes topBack{
+    0%{-moz-transform: scale(1.5);}
+    100%{-moz-transform: scale(1);}
+}
+
+/**关于我们**/
+
+.navPop{background-color: rgba(0,13,25,0.85);width: calc(100% - 48px);height: calc(100% - 48px);position: fixed;top: 24px;left: 24px;display: none;z-index: 200;padding: 48px;perspective: 5000px;transform-style: preserve-3d;-webkit-transform-style: preserve-3d;-webkit-perspective: 5000px;}
+.navContent{width: 100%;height: 100%;border: 1px solid #fff;position: relative;opacity: 0;left: -50%;transform: rotateY(-50deg);transform-origin:0 50%;}
+.navLogo{width: 30%;height: 100%;position: relative;display: block;float: left;}
+.navLogo img{width: 120px;display: block;position: absolute;top: 0;left: 0;bottom: 0;right: 0;margin: auto;padding: 20px;}
+.navLogo a{transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;}
+.navLogo a:hover{opacity: 0.6;}
+.navContent ul{width: 35%;overflow: hidden;float: left;position: relative;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.navContent ul li{width: 100%;overflow: hidden;margin-bottom: 6%;}
+.navContent ul li:last-child{margin-bottom: 0!important;}
+.navContent ul li a{color: #fff;font-size: 36px;text-align: center;display: block;width: 100%;overflow: hidden;cursor: pointer;position: relative;padding-bottom: 6px;}
+.navContent ul li a b{display: block;width: 0;height: 1px;background-color: #fff;position: absolute;left: 10%;overflow: hidden;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);transition: all 0.3s ease-out;-webkit-transition: all 0.3s ease-out;-o-transition: all 0.3s ease-out;-moz-transition: all 0.3s ease-out;}
+.navContent ul li .on b{width: 80%;}
+.introduce{display: block;width: 35%;overflow: hidden;color: #fff;font-size: 20px;padding: 24px;float: left;text-align: center;position: relative;top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.introduce p{display: block;width: 100%;overflow: hidden;font-size: 25px;margin-bottom: 12px;}
+.introduce span{display: block;width: 100%;overflow: hidden;margin-bottom: 12px;line-height: 1.5;}
+.popClose{width: 50px;height: 50px;position: absolute;top: 0;right: 0;cursor: pointer;}
+.popClose a{width: 20px;height: 2px;display: block;background-color: #fff;position: absolute;top: 0;left: 0;right: 0;bottom: 0;margin: auto;}
+.popClose a:nth-child(1){transform: rotate(45deg);}
+.popClose a:nth-child(2){transform: rotate(-45deg);}
+.popClose:hover{transform: rotate(-180deg);}
+
+
+.navBt{width: 50px;height: 50px;background-color: #fff;position: fixed;top: 24px;left: 24px;padding: 18px 15px 15px 15px;cursor: pointer;z-index: 100;}
+.navBt a{display: block;width: 100%;height: 2px;background-color: #313131;margin-bottom: 5px;}
+
+.aboutTOP{width: 100%;overflow: hidden;padding: 24px;padding-bottom: 0!important;position: relative;left: 100%;}
+.aboutTOP img{width: 100%;}
+
+.aboutLogo{width: 100px;overflow: hidden;position: absolute;top: 50%;left: 50%;margin-left: -50px;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.aboutLogo img{display: block;width: 100%;}
+
+.aboutContent{width: 100%;overflow: hidden;position: relative;left: 100%;}
+.aboutContent h2{text-align: center;display: block;width: 100%;padding: 24px 0 12px 0;color: #000b4c;font-family: myFont;font-size: 30px;font-weight: 100;}
+.aboutContent p{text-align: center;display: block;width: 100%;overflow: hidden;margin-bottom: 12px;font-size: 16px;color: #333;}
+.aboutContent span{display: block;width: 100%;overflow: hidden;margin-bottom: 12px;font-size: 13px;color: #666;text-align: center;}
+.members{width: 100%;overflow: hidden;padding: 24px;margin-top: 36px;position: relative;left: 100%;}
+.members li{width: 48%;float: left;border-top: 1px solid #333;}
+.members li:nth-child(1){margin-right: 4%;}
+.members h2,.development h2,.location h2{color: #000b4c;font-family: myFont;font-size: 20px;font-weight: 100;margin-top: 36px;}
+.members span,.development span,.location span{display: block;width: 100%;overflow: hidden;color: #333;font-size: 16px;margin-top: 5px;}
+.members p,.development p{display: block;width: 100%;overflow: hidden;font-size: 13px;color: #666;margin-top: 12px;line-height: 1.5}
+.development{width: calc(100% - 48px);overflow: hidden;margin:0 auto;position: relative;left: 100%;}
+
+.location{width: calc(100% - 48px);overflow: hidden;margin: 72px auto 0 auto;border-top: 1px solid #333;position: relative;left: 100%;}
+.location img{width: 100%;display: block;margin-top: 12px;}
+
+
+/**service**/
+.serviceNav{top: 50%;transform: translateY(-50%);-webkit-transform: translateY(-50%);-o-transform: translateY(-50%);-moz-transform: translateY(-50%);}
+.code{width: 40%;height: 100%;overflow: hidden;color: rgba(255,255,255,0.3);position: fixed;top: 0;right: 3%;line-height: 1.5;font-size: 14px;}
+.digital{width: 100%;overflow: hidden;padding: 24px 24px 48px 100px;}
+.digital h2,.eleContent h2,.interact h2,.caseTop h2{color: #000b4c;font-family: myFont;font-size: 30px;font-weight: 100;}
+.digital span,.eleContent span,.interact span,.caseTop span{display: block;width: 100%;overflow: hidden;color: #333;font-size: 16px;margin-top: 5px;}
+.digital ul{width: 100%;overflow: hidden;margin-top: 72px;}
+.digital ul li{width: calc((100% - 72px)/4);overflow: hidden;border-top: 1px solid #333;float: left;margin-right: 24px;padding-top: 24px;}
+.digital ul li:last-child{margin-right: 0!important;}
+.digital ul li h2{font-size: 20px;}
+.digital ul li p,.eleContent p{display: block;width: 100%;overflow: hidden;color: #666;font-size: 14px;line-height: 1.8;margin-top: 12px; letter-spacing: 3px;}
+.line{width: 100%;height: 1px;background: #333;margin: 96px 0 0 0;}
+
+.electricity{width: 100%;overflow: hidden;background: url(../images/electricity.jpg) no-repeat fixed rgb(242, 242, 242);background-size: cover;}
+.eleContent{width: 40%;overflow: hidden;padding: 10% 0;float: right;padding-right: 24px!important;}
+.interact{width: 100%;overflow: hidden;padding: 48px;text-align: center;}
+.interact ul{width: 80%;overflow: hidden;margin: 48px auto;}
+.interact ul li{width: calc((100% - 72px)/4);overflow: hidden;float: left;margin-right: 24px;text-align: center;}
+.interact ul li:last-child{margin-right: 0!important;}
+.interact ul li h2{font-size: 20px;}
+.interact ul li a{display: block;width: 50px;height: 50px;border-radius: 100%;background: #e8390d;position: relative;left: 50%;margin-left: -25px;color: #fff;text-align: center;line-height: 50px;font-size: 30px;}
+.interact ul li a img{display: block;width: 25px;position: absolute;top: 0;left: 0;bottom: 0;right: 0;margin: auto;}
+.interact ul li p{display: block;width: 100%;overflow: hidden;line-height: 1.5;color: #666;font-size: 14px;margin-top: 12px;}
+
+.client{width: 100%;overflow: hidden;padding: 48px;background: #313131;color: #fff;}
+.client h2{font-family: myFont;font-size: 30px;font-weight: 100;}
+.client span{display: block;width: 100%;overflow: hidden;font-size: 16px;margin-top: 5px;}
+.client ul{width: 100%;overflow: hidden;margin-top: 24px;}
+.client ul li{width: calc((100% - 72px)/4);overflow: hidden;float: left;margin-right: 24px;border-left: 4px solid #e8390d;padding-left: 12px;}
+.client ul li:last-child{margin-right: 0!important;}
+
+/**CASE**/
+.caseTop{width: 100%;overflow: hidden;padding: 24px 24px 48px 100px;}
+.caseTop .line{margin-top: 24px;width: 200px;}
+.caseContent{width: 100%;overflow: hidden;padding-left: 100px;padding-right: 48px;}
+.caseContent li{width: calc((100% - 72px)/3);overflow: hidden;float: left;margin-right: 24px;position: relative;background-size: cover!important;margin-bottom: 24px;left: 100%;cursor: pointer;padding: 24px;}
+.caseContent li:nth-child(3n){margin-right: 0!important;}
+.caseContent li p{display: block;width: 100%;overflow: hidden;color: #fff;font-size: 16px;position: absolute;bottom: 24px;left: 24px;z-index: 100;}
+.caseContent li p b{display: block;width: 10%;height: 4px;background-color: #e8390d;margin-bottom: 12px;}
+.caseContentBack{width: 100%;height: 100%;background-color: rgba(0,0,0,0.3);position: absolute;top: 0;left: 0;z-index: 10;}
+
+.loading{width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 1200;}
+.loadTop,.loadBottom{width: 100%;height: 50%;background-color: #00010f;position: relative;z-index: 0;}
+.loading b{display: block;width: 0;height: 1px;background-color: #e8390d;position: absolute;left: 0;z-index: 1;top: 50%;transition: all 1s ease-out;}

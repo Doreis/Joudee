@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;border: 0;box-sizing: border-box;-webkit-box-sizing: border-box;-o-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;font-family: "微软雅黑", "黑体", sans-serif;}
+html,body{width: 100%;height: 100%;font-size: 62.5%;background-color: #00bff3;}
+a:visited{text-decoration: none;}
+a:link{text-decoration: none;}
+a:active{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,li{list-style: none;}
+
+footer{width: 1000%;height: 260px;position: fixed;left: 0;bottom: 0;transition: all 0.2s linear;-webkit-transition: all 0.2s linear;-o-transition: all 0.2s linear;-moz-transition: all 0.2s linear;background: url(../images/footerBg.png) repeat-x;background-size: auto 100%;}
+
+.all{width: 100%;height: 100%;overflow: hidden;position: relative;}
+.manDiv{width: 90px;height: 152px;position: fixed;bottom: 92px;left: 50%;margin-left: -45px;z-index: 300;}
+.manDiv img{display: block;height: 100%;}
+.allContent{width: 100%;height: 100%;position: relative;overflow: hidden;z-index: 200;}
+.allContentCo{width: 1000%;height: 100%;position: relative;background: transparent;transition: all 0.2s linear;-webkit-transition: all 0.2s linear;-o-transition: all 0.2s linear;-moz-transition: all 0.2s linear;}
+.contentChild{width: calc(100%/10);width: -webkit-calc(100%/10);width: -moz-calc(100%/10);height: 100%;float: left;position: relative;}
+.checkPoint{width: 156px;overflow: hidden;position: absolute;bottom: 109px;left: 20px;height: 88px;background: url(../checkPImg/check1.png) no-repeat center;line-height: 80px;color: #f0d27f;}
+.checkPoint span{margin-left: 64px;font-size: 14px;opacity: 0;}
+.content2{padding: 0 5%;}

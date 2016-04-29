@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROTECHNOLOGIES</title>
+    <link rel="stylesheet" type="text/css" href="css/css1.css">
+</head>
+<body>
+
+<div class="homeTop">
+    <div class="homeTopRight">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<img src="img/logo1.png" class="logo1"/>
+<p class="homePro">P R O T E C H N O L O G I E S</p>
+<p class="usePrompt">SCROLL<span>DOWN</span></p>
+
+    <div class="homeAll">
+        <!--导航-->
+        <div class="navDiv">
+            <b></b>
+            <b></b>
+            <b></b>
+        </div>
+        <!--END导航-->
+
+
+        <div class="navPop">
+            <div class="navPopLeft">
+                <div class="navClose">
+                    <a></a>
+                    <a></a>
+                </div>
+            </div>
+            <div class="navPopRight">
+                <nav>
+                    <a class="pageN on" href="index2.html">Home<b></b></a><br>
+                    <a>Works<b></b></a><br>
+                    <a>Contact<b></b></a><br>
+                    <a>About Me<b></b></a>
+                </nav>
+            </div>
+        </div>
+
+
+
+        <div class="all">
+
+
+
+            <div class="homeTopLeft">
+                <ul>
+                    <li>
+                        <span></span>
+                        <p>According to the design complete the page with HTML and CSS. At the same time, on this basis, to complete the page for maintenance and the optimization of web front-end performance accordingly. In addition, a qualified front-end development engineer, should have a certain aesthetic ability and basic art skills, can be a very good interaction and visual collaboration.</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>Interaction design efforts is to create and build a meaningful relationship between people and products and services, to "embedded in the material world full of social complexity information technology" as the center. Interactive system design goals can be from the "availability" and "user experience" two level analysis, focus on people-oriented user requirements.</p>
+                    </li>
+                    <li>
+                        <span></span>
+                        <p>According to the design complete the page with HTML and CSS. At the same time, on this basis, to complete the page for maintenance and the optimization of web front-end performance accordingly. In addition, a qualified front-end development engineer, should have a certain aesthetic ability and basic art skills, can be a very good interaction and visual collaboration.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="homeContent">
+                <ul>
+                    <li>
+                        <a class="homeCo" href="upmi/index.html">
+                            <b></b>
+                            <span>Rice science and technology on the website</span>
+                            <p></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="homeCo" href="http://www.zyanjing.com">
+                            <b></b>
+                            <span>Glasses b2b website</span>
+                            <p></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/navJs.js"></script>
+    <script>
+        (function(){
+            var homeTop = $(".homeTop"),
+                    body = $("body"),
+                    homeCo = $(".homeCo"),
+                    homeTopLeft = $(".homeTopLeft"),
+                    homeAll = $(".homeAll"),
+                    homeTopRightUl = $(".homeTopRight ul");
+
+            homeTop.height(body.height());
+            homeTopLeft.height(body.height()*3);
+
+            homeCo.hover(function(){
+               $(this).find("b").css({
+                   "transform":"translateZ(40px)",
+                   "box-shadow": "0 0 45px rgba(0,0,0,0.4)"
+               });
+                $(this).find("p").css({
+                    "transform":"translateX(-50%) translateY(-50%) translateZ(100px)"
+                });
+                $(this).find("span").css({
+                    "transform":"translateX(-50%) translateY(-50%) translateZ(150px)"
+                });
+            },function(){
+                $(this).find("b").css({
+                    "transform":"translateZ(0)",
+                    "box-shadow": "0 0 20px rgba(0,0,0,0.7)"
+                });
+                $(this).find("p").css({
+                    "transform":"translateX(-50%) translateY(-50%) translateZ(40px)"
+                });
+                $(this).find("span").css({
+                    "transform":"translateX(-50%) translateY(-50%) translateZ(50px)"
+                });
+            });
+
+
+            homeCo.mouseenter(function(){
+               $(this).mousemove(function(e){
+                   var mouseX = e.clientX,
+                           mouseY = e.clientY;
+                   var moveX = parseInt(20/374*(300-mouseX+$(this).offset().left)),
+                           moveY = parseInt(20/360*(360-mouseY));
+                   $(this).css({
+                       "transform":"rotateY("+moveX+"deg) rotateX("+-moveY+"deg)",
+                       "-webkit-transform":"rotateY("+moveX+"deg) rotateX("+-moveY+"deg)",
+                       "-moz-transform":"rotateY("+moveX+"deg) rotateX("+-moveY+"deg)",
+                       "-o-transform":"rotateY("+moveX+"deg) rotateX("+-moveY+"deg)"
+                   });
+               });
+            });
+
+            homeCo.mouseleave(function(){
+                $(this).css({
+                    "transform":"rotateY(0deg) rotateX(0deg)",
+                    "-webkit-transform":"rotateY(0deg) rotateX(0deg)",
+                    "-moz-transform":"rotateY(0deg) rotateX(0deg)",
+                    "-o-transform":"rotateY(0deg) rotateX(0deg)"
+                });
+            });
+
+
+            $(window).scroll(function(){
+                homeTopRightUl.css("left",-homeTopRightUl.width()*2/3+body.scrollTop());
+                if(homeTopRightUl.position().left>603){
+                    homeTopRightUl.css("left",0);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
